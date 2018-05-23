@@ -1,0 +1,45 @@
+<%- include('../partials/head.ejs') %>
+    <%- include('../partials/header.ejs') %>
+
+        <main>
+
+            <%- include('../partials/navigation') %>
+
+                <section>
+                    <article>
+                        <div>
+                            <img src="/uploads/<%= user.mainID %>.png" alt="<%= user.mainID %>">
+                        </div>
+                            <h1><%- user.name %></h1>
+                    </article>
+                </section>
+
+                <section id="chat">
+                        <section>
+                            <% for(var i = 0; i < messages.length; i++) {
+                                if (self == messages[i].mainID) { %>
+
+                                <h2 class="ownmessage"><%- messages[i].name %></h2>
+                                <p><%- messages[i].message %></p>
+
+                                <% } else {%>
+
+                                <h2><%- messages[i].name %></h2>
+                                <p><%- messages[i].message %></p>
+
+                                <% }
+                            }%>
+                        </section>
+                </section>
+
+                <fieldset>
+                    <form id="myform" action="/berichten/<%- user.mainID %>" method="post">
+                        <label for="message">Bericht</label>
+                        <textarea id="message" name="message"></textarea>
+                        <input type="submit" value="Verzenden">
+                    </form>
+                </fieldset>
+
+        </main>
+
+        <%- include('../partials/foot.ejs') %>

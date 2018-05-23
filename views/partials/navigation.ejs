@@ -1,0 +1,11 @@
+<section>
+    <ul>
+        <% if (admin == true) { %>
+        <li><a href="/browsen"><img src="<%= browseIcon %>" alt=""><h2>Admin</h2></a></li>
+        <% } else {%>
+        <li><a href="/browsen"><img src="<%= browseIcon %>" alt=""><h2>Browsen</h2></a></li>
+        <% } %>
+        <li><a href="/berichten"><img src="<%= chatIcon %>" alt=""><h2>Berichten</h2></a></li>
+        <li><a href="/profiel"><img src="<%= userIcon %>" alt=""><h2>Profiel</h2></a></li>
+    </ul>
+</section>

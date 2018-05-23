@@ -1,0 +1,28 @@
+<%- include('../partials/head.ejs') %>
+    <%- include('../partials/header.ejs') %>
+
+        <main>
+
+            <%- include('../partials/navigation') %>
+
+                <section>
+                    <% for(var i = 0; i < matches.length; i++) { %>
+                        <% if (matches[i].mainID == self) { %>
+                        <% } else if (matches[i].mainID != self) { %>
+                            <a href="/berichten/<%= matches[i].mainID %>">
+                                <article>
+                                    <div>
+                                        <img src="/uploads/<%= matches[i].mainID %>.png" alt="<%= matches[i].mainID %>">
+                                    </div>
+                                    <div>
+                                        <h2><%= matches[i].name %></h2>
+                                        <p><%= matches[i].lastMsg %></p>
+                                    </div>
+                                </article>
+                            </a>
+                        <% } %>
+                    <% } %>
+                </section>
+        </main>
+
+        <%- include('../partials/foot.ejs') %>

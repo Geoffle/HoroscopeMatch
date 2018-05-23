@@ -1,0 +1,45 @@
+<%- include('../partials/head.ejs') %>
+    <%- include('../partials/header.ejs') %>
+
+        <main>
+
+            <%- include('../partials/navigation') %>
+
+                <article>
+                    <div>
+                        <img src="/uploads/<%= user.ID %>.png" alt="<%= user.ID %>">
+                    </div>
+
+                    <form method="post" enctype="multipart/form-data">
+                        <label for="bs-file">File:</label>
+                        <input type="file" name="bs-file" id="bs-file" value="" />
+                        <label for="submit"></label>
+                        <input type="submit" id="submit" value="Upload!" />
+                    </form>
+
+                    <h2><%- user.name %></h2>
+
+                    <section>
+                        <p><strong>Locatie:</strong> <%= user.location %></p>
+                        <p><strong>Zon:</strong> <%= user.horoscopeSun %></p>
+                        <hr>
+                        <p><strong>Bio</strong></p>
+                        <p><%= user.bio %></p>
+                        <p><strong>Tags</strong></p>
+                        <p><%= user.tags %></p>
+                    </section>
+
+                    <section class="profile">
+                        <form action="/profiel/wijzigen">
+                            <input type="submit" value="Wijzigen">
+                        </form>
+
+                        <form action="/uitloggen">
+                            <input type="submit" value="Uitloggen">
+                        </form>
+                    </section>
+                </article>
+
+        </main>
+
+        <%- include('../partials/foot.ejs') %>

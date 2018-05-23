@@ -1,0 +1,24 @@
+<%- include('partials/head.ejs') %>
+    <%- include('partials/header.ejs') %>
+
+        <main>
+
+            <%- include('partials/navigation') %>
+
+                <fieldset>
+                    <form action="/" method="post">
+                        <label for="username">E-mail</label>
+                        <input type="text" name="username" required>
+                        <label for="password">Wachtwoord</label>
+                        <input type="password" name="password" required>
+                        <input type="submit" value="Inloggen">
+                    </form>
+                </fieldset>
+
+                <form action="/registreren">
+                    <input type="submit" value="Registreren">
+                </form>
+
+        </main>
+
+        <%- include('partials/foot.ejs') %>

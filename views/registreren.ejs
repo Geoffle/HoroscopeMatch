@@ -1,0 +1,35 @@
+<%- include('partials/head.ejs') %>
+    <%- include('partials/header.ejs') %>
+        <main>
+
+            <%- include('partials/navigation') %>
+
+                <main>
+                    <form action="/registreren" method="post">
+                        <p>Naam</p>
+                        <input type="text" name="name">
+                        <p>Geslacht</p>
+                        <select name="sex" id="">
+                            <option value="Man">Man</option>
+                            <option value="Vrouw">Vrouw</option>
+                        </select>
+                        <p>Geboortedatum</p>
+                        <input type="text" name="birthdate" placeholder="dd-mm-jjjj">
+                        <p>Woonplaats</p>
+                        <input type="text" name="location">
+                        <p>E-mail</p>
+                        <input id="email" type="text" name="email">
+                        <p>Wachtwoord</p>
+                        <input type="password" name="password">
+                        <p>Herhaal wachtwoord</p>
+                        <input type="password">
+                        <input type="submit" value="Registreren">
+                    </form>
+
+                    <form action="/">
+                        <input type="submit" value="Annuleren">
+                    </form>
+
+                </main>
+
+                <%- include('partials/foot.ejs') %>

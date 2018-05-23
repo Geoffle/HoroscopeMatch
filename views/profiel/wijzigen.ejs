@@ -1,0 +1,62 @@
+<%- include('../partials/head.ejs') %>
+    <%- include('../partials/header.ejs') %>
+
+        <main>
+
+            <%- include('../partials/navigation') %>
+
+                <article>
+                    <div>
+                        <img src="/uploads/<%= user.ID %>.png" alt="<%= user.ID %>">
+                    </div>
+
+                    <form action="/profiel/wijzigen" method="post">
+                        <p>Naam</p>
+                        <input type="text" name="name" value="<%- user.name %>">
+                        <p>Geslacht</p>
+                        <select name="sex" id="">
+                            <option value="Man">Man</option>
+                            <option value="Vrouw">Vrouw</option>
+                        </select>
+                        <p>Geboortedatum</p>
+                        <input type="text" name="birthdate" value="<%- user.birthdate %>" placeholder="dd-mm-jjjj">
+                        <p>Locatie</p>
+                        <input type="text" name="location" value="<%- user.location %>">
+                        <p>Sterrenbeeld</p>
+                        <select name="horoscopeSun" id="">
+                        <option value="Kreeft">Kreeft</option>
+                        <option value="Steenbok">Steenbok</option>
+                        </select>
+                        <p>Bio</p>
+                        <input type="text" name="bio" value="<%- user.bio %>">
+                        <p>Tags</p>
+                        <input type="text" name="tags" value="<%- user.tags %>">
+                        <p>Verberg profiel voor anonieme gebruikers</p>
+                        <select name="private" id="">
+                        <option value="0">Tonen</option>
+                        <option value="1">Verbergen</option>
+                        <p>E-mail</p>
+                        <input type="text" name="email" value="<%- user.email %>">
+                        <p>Oude wachtwoord</p>
+                        <input type="password" name="oldpassword">
+                        <p>Nieuwe wachtwoord</p>
+                        <input type="password" name="password">
+                        <p>Herhaal wachtwoord</p>
+                        <input type="password">
+                        <input type="submit" value="Wijzigen">
+                    </form>
+
+                    <section class="profile">
+                        <form action="/profiel">
+                            <input type="submit" value="Annuleren">
+                        </form>
+
+                        <form action="../uitloggen">
+                            <input type="submit" value="Uitloggen">
+                        </form>
+                    </section>
+                </article>
+
+        </main>
+
+        <%- include('../partials/foot.ejs') %>

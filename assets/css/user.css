@@ -1,0 +1,103 @@
+/*========================================================
+    USER
+========================================================*/
+
+main article section:nth-of-type(1) {
+    height: 10.5em;
+}
+
+main article div {
+    width: 100%;
+    height: 15em;
+}
+
+main article div img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+main article h2 {
+    text-align: center;
+    background-color: #807ed8;
+    color: #fff;
+    padding: 0.3em;
+}
+
+/*========================================================
+    USER - FORM
+========================================================*/
+
+main > article > section.profile {
+    width: 100%;
+    display: flex;
+    padding: 2em;
+}
+
+main > article > section.profile form {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+main > article > section.profile input[type="submit"] {
+    width: 80%;
+    height: 3em;
+}
+
+/*========================================================
+    USER - @MEDIA
+========================================================*/
+
+/*
+@media screen and (min-width: 72.000em) {
+
+    html, body {
+        background-image: url(../image/background.jpg);
+        background-size: cover;
+        height: 100%;
+    }
+
+    main {
+        justify-content: center;
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+
+    main article section:nth-of-type(1) {
+        overflow: inherit;
+    }
+
+    main > article > section:nth-of-type(2) {
+        position: inherit;
+        order: 2;
+    }
+
+    article {
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        background-color: #eef3ff;
+        border-radius: 1.250em;
+        overflow: hidden;
+    }
+
+    main > article > div {  IMG container
+        width: 50%;
+    }
+
+    main > article > h2 {
+        order: -1;
+        align-self: baseline;
+        flex-basis: 100%;
+    }
+
+    form {
+        order: 1;
+        height: 1em;
+    }
+
+}
+*/
+

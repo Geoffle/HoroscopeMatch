@@ -1,0 +1,36 @@
+<%- include('../partials/head.ejs') %>
+    <%- include('../partials/header.ejs') %>
+
+        <main>
+
+            <%- include('../partials/navigation') %>
+
+                <article>
+                    <div>
+                        <img src="/uploads/<%= user.ID %>.png" alt="<%= user.ID %>">
+                    </div>
+
+                    <h2><%= user.name %></h2>
+
+                    <section>
+                        <p><strong>Locatie:</strong> <%= user.location %></p>
+                        <p><strong>Zon:</strong> <%= user.horoscopeSun %></p>
+                        <p><strong>Maan:</strong> <%= user.horoscopeMoon %></p>
+                        <hr>
+                        <p><strong>Bio</strong></p>
+                        <p><%= user.bio %></p>
+                        <p><strong>Tags</strong></p>
+                        <p><%= user.tags %></p>
+                    </section>
+                    <section>
+                        <form action="/browsen/<%= user.ID %>" method="post">
+                            <input type="submit" value="Like">
+                        </form>
+                        <form action="/browsen/<%= user.ID %>" method="post">
+                            <input type="submit" value="Star">
+                        </form>
+                    </section>
+                </article>
+        </main>
+
+        <%- include('../partials/foot.ejs') %>

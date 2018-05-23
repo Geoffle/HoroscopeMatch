@@ -1,0 +1,32 @@
+<%- include('../partials/head.ejs') %>
+    <%- include('../partials/header.ejs') %>
+
+        <main>
+
+            <%- include('../partials/navigation') %>
+
+                <section id="grid">
+                    <% var i; for(i = 0; i < users.length; i++) { %>
+                        <a href="/browsen/<%= users[i].ID %>">
+                            <article>
+                                <div>
+                                    <img src="/uploads/<%= users[i].ID %>.png" alt="<%= users[i].ID %>">
+                                </div>
+                                <h2><%- users[i].name %></h2>
+                                <p><%- users[i].location %></p>
+                                <p><%- users[i].horoscopeSun %></p>
+                                <p><%- users[i].horoscopeMoon %></p>
+                            </article>
+                        </a>
+                    <% if (i > 2) { // Laad niet meer dan 4 profielen om loop te stoppen
+                        i = users.length;
+
+                        }
+                    } %>
+                    <noscript>
+                    </noscript>
+                </section>
+
+        </main>
+
+        <%- include('../partials/foot.ejs') %>

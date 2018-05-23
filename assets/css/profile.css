@@ -1,0 +1,122 @@
+/*========================================================
+    PROFILE
+========================================================*/
+
+main > article > div { /* IMG container */
+    width: 100%;
+    height: 15em;
+}
+
+main > article > div > img { /* IMG scaling */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main article h2 {
+    text-align: center;
+    background-color: #807ed8;
+    color: #fff;
+    padding: 0.3em;
+}
+
+.menu-button {
+    display: inherit;
+    height: 2em;
+}
+
+.menu {
+    display: inherit;
+    position: absolute;
+    z-index: 0;
+    top: -2.750em;
+    right: 0em;
+    background: #807ed8;
+    padding: 0.625em;
+    border-radius: 1.250em 0 0 1.250em;
+    transition: top 0.5s;
+}
+
+.menu-open {
+    position: absolute;
+    z-index: 0;
+    top: 3.750em;
+    right: 0em;
+    background: #807ed8;
+    padding: 0.625em;
+    border-radius: 1.250em 0 0 1.250em;
+    transition: top 1s;
+}
+
+/*========================================================
+    PROFILE - FORM
+========================================================*/
+
+main > article > section:nth-of-type(2) {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    bottom: 64px;
+    padding: 2em;
+}
+
+form {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+input[type="submit"] {
+    width: 80%;
+    height: 3em;
+}
+
+/*========================================================
+    PROFILE - @MEDIA
+========================================================*/
+
+@media screen and (min-width: 72.000em) {
+
+
+    html, body {
+        background-image: url(../image/background.jpg);
+        background-size: cover;
+        height: 100%;
+    }
+
+    main {
+        justify-content: center;
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+
+    main article section:nth-of-type(1) {
+        overflow: inherit;
+        height: 25em;
+    }
+
+    main > article > section:nth-of-type(2) {
+        position: inherit;
+    }
+
+    article {
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        background-color: #eef3ff;
+        border-radius: 1.250em;
+        overflow: hidden;
+    }
+
+    main > article > div { /* IMG container */
+        width: 50%;
+    }
+
+    main > article > h2 {
+        order: -1;
+        align-self: baseline;
+        flex-basis: 100%;
+    }
+}
+

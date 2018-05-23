@@ -1,0 +1,115 @@
+/*========================================================
+    CHAT
+========================================================*/
+
+main {
+    height: 30em;
+}
+
+main section:nth-of-type(2) a article {
+    padding-top: 0.8em;
+    display: flex;
+    height: 11em;
+}
+
+main section:nth-of-type(2) a article div:nth-of-type(2) { /* H1 & bericht container */
+    padding-left: 1em;
+    color: #46457b;
+}
+
+main section:nth-of-type(2) > article div:nth-of-type(1) { /* Chat IMG container */
+    width: 100%;
+    height: 15em;
+}
+
+main section:nth-of-type(2) a article div:nth-of-type(1) { /* IMG container */
+    height: 10em;
+    width: 10em;
+    overflow: hidden;
+    border-radius: 1.250em;
+    margin-left: 0.8em;
+}
+
+main section:nth-of-type(2) article h1 { /* Naam */
+    text-align: center;
+    background-color: #807ed8;
+    color: #fff;
+    padding: 0.3em;
+}
+
+main section:nth-of-type(2) img { /* IMG scaling */
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+#chat > section { /* Chat scroll */
+    overflow: scroll;
+    height: 16em;
+    padding-top: 1em;
+    padding-left: 1em;
+}
+
+#chat > section > h2 { /* chat color */
+    color: #f05228;
+}
+
+#chat > section > h2.ownmessage {
+    color: #46457b;
+}
+/*========================================================
+    CHAT - FORM
+========================================================*/
+
+form#myform {
+    height: 2em;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    bottom: 64px;
+}
+
+textarea#message {
+    width: 75%;
+}
+
+input[type="submit"] {
+    width: 25%;
+}
+
+label { /* Label hide */
+    display: none;
+}
+
+/*========================================================
+    CHAT - @MEDIA
+========================================================*/
+
+@media screen and (min-width: 72.000em) {
+    article {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main section:nth-of-type(2) > article div:nth-of-type(1) {
+        width: 25%;
+    }
+
+    main section:nth-of-type(2) article h1 {
+        text-align: initial;
+        background-color: initial;
+        color: initial;
+        padding: initial;
+        order: -1;
+        flex-basis: 100%;
+    }
+
+    form#myform {
+        bottom: 0;
+    }
+
+    #chat > section {
+        height: 35em;
+    }
+
+}

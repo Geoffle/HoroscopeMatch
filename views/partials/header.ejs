@@ -1,0 +1,43 @@
+<header>
+    <img src="/icons/hm.svg" alt="">
+    <h1>Horoscope Match</h1>
+    <img class="menu-button" src="/icons/menu.svg" alt="">
+    <nav class="menu">
+        <ul>
+            <% if (admin == true) { %>
+            <li><a href="/browsen/<%= deleteUser %>/delete">Verwijder gebruiker</a></li>
+            <% } else {%>
+            <li><a href="/">Report gebruiker</a></li>
+            <% } %>
+        </ul>
+    </nav>
+    <img class="filter-button" src="/icons/menu.svg" alt="">
+    <nav class="filter">
+        <ul>
+            <li><a href="/browsen/filter?horoscopezon=Ram">Horoscope Zon: Ram</a></li>
+            <li><a href="/browsen/filter?horoscopezon=Stier">Horoscope Zon: Stier</a></li>
+            <li><a href="/browsen/filter?horoscopezon=Tweeling">Horoscope Zon: Tweeling</a></li>
+            <li><a href="/browsen/filter?horoscopezon=Kreeft">Horoscope Zon: Kreeft</a></li>
+            <li><a href="/browsen/filter?horoscopezon=Leeuw">Horoscope Zon: Leeuw</a></li>
+            <li><a href="/browsen/filter?horoscopezon=Maagd">Horoscope Zon: Maagd</a></li>
+            <li><a href="/browsen/filter?horoscopezon=Weegschaal">Horoscope Zon: Weegschaal</a></li>
+            <li><a href="/browsen/filter?horoscopezon=Schorpioen">Horoscope Zon: Schorpioen</a></li>
+            <li><a href="/browsen/filter?horoscopezon=Boogschutter">Horoscope Zon: Boogschutter</a></li>
+            <li><a href="/browsen/filter?horoscopezon=Steenbok">Horoscope Zon: Steenbok</a></li>
+            <li><a href="/browsen/filter?horoscopezon=Waterman">Horoscope Zon: Waterman</a></li>
+            <li><a href="/browsen/filter?horoscopezon=Vissen">Horoscope Zon: Vissen</a></li>
+            <li><a href="/browsen/filter?horoscopemaan=Ram">Horoscope Maan: Ram</a></li>
+            <li><a href="/browsen/filter?horoscopemaan=Stier">Horoscope Maan: Stier</a></li>
+            <li><a href="/browsen/filter?horoscopemaan=Tweeling">Horoscope Maan: Tweeling</a></li>
+            <li><a href="/browsen/filter?horoscopemaan=Kreeft">Horoscope Maan: Kreeft</a></li>
+            <li><a href="/browsen/filter?horoscopemaan=Leeuw">Horoscope Maan: Leeuw</a></li>
+            <li><a href="/browsen/filter?horoscopemaan=Maagd">Horoscope Maan: Maagd</a></li>
+            <li><a href="/browsen/filter?horoscopemaan=Weegschaal">Horoscope Maan: Weegschaal</a></li>
+            <li><a href="/browsen/filter?horoscopemaan=Schorpioen">Horoscope Maan: Schorpioen</a></li>
+            <li><a href="/browsen/filter?horoscopemaan=Boogschutter">Horoscope Maan: Boogschutter</a></li>
+            <li><a href="/browsen/filter?horoscopemaan=Steenbok">Horoscope Maan: Steenbok</a></li>
+            <li><a href="/browsen/filter?horoscopemaan=Waterman">Horoscope Maan: Waterman</a></li>
+            <li><a href="/browsen/filter?horoscopemaan=Vis">Horoscope Maan: Vissen</a></li>
+        </ul>
+    </nav>
+</header>
